@@ -4,10 +4,10 @@ package com.myapp.demo.rest;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FootBallCoach implements Coach {
+public class BasketBallCoach implements Coach {
 
     @Override
     public String getDailyWork() {
-        return "FootBall Coach";
+        return "BasketBall Coach";
     }
 }
