@@ -12,7 +12,8 @@ public class FirstController {
 
 
     @Autowired
-    public FirstController(@Qualifier("basketBallCoach") Coach myCoach) {
+    public FirstController(Coach myCoach) {
+        System.out.println("in Constructor " + getClass().getSimpleName() );
         this.myCoach = myCoach;
     }
 
