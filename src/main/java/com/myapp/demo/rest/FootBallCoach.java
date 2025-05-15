@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
 public class FootBallCoach implements Coach {
     public FootBallCoach() {
         System.out.println("in Constructor " + getClass().getSimpleName() );

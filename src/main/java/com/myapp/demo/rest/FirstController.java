@@ -8,17 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FirstController {
-    private final Coach myCoach;
+    private final Coach firstCoach;
 
 
     @Autowired
-    public FirstController(Coach myCoach) {
-        System.out.println("in Constructor " + getClass().getSimpleName() );
-        this.myCoach = myCoach;
+    public FirstController(@Qualifier("basketBallCoach") Coach firstCoach) {
+        this.firstCoach = firstCoach;
     }
 
     @GetMapping("/")
     public String getText() {
-        return myCoach.getDailyWork();
+        return firstCoach.getDailyWork();
     }
 }
